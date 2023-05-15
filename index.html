@@ -1,0 +1,142 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Wags and Whiskers Animal Shelter</title>
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID"></script>
+  <script src="basic.js">donateClicked()</script>
+</head>
+
+<body>
+  <header>
+    <img src="images/badLogo.png" class="logo">
+    <button class="donateButton" id="donateButton">
+      Donate Now ♥
+    </button>
+  </header>
+  <section class="contentSection">
+    <h1 class="sectionTitle">About</h1>
+    <div class="content">
+      <article>
+        <img src="images/placeholder.jpeg" alt="" class="image">
+      </article>
+      <article>
+        <p class="generalText">
+          Founded on December 10, 2022, Wags and Whiskers Animal Shelter to meet the ever growing need to provide
+          Shelter
+          and Rescue services in Decatur County.
+        </p>
+      </article>
+    </div>
+  </section>
+  <section class="contentSection">
+    <h1 class="sectionTitle">Board of Directors</h1>
+    <article class="fullBoard">
+      <div class="memberCell">
+        <img src="images/unknown.jpeg" class="boardImg">
+        <p class="boardMember">Cheryl Sparkman</p>
+        <p class="boardRole">President</p>
+      </div>
+
+      <div class="memberCell">
+        <img src="images/unknown.jpeg" class="boardImg">
+        <p class="boardMember">Christina Gagliano</p>
+        <p class="boardRole">Secretary</p>
+      </div>
+
+      <div class="memberCell">
+        <img src="images/unknown.jpeg" class="boardImg">
+        <p class="boardMember">Stephanie McPeake</p>
+        <p class="boardRole">Treasurer</p>
+      </div>
+
+      <div class="memberCell">
+        <img src="images/unknown.jpeg" class="boardImg">
+        <p class="boardMember">Betty Butler Maness</p>
+        <p class="boardRole">Fundraising Chairperson</p>
+      </div>
+
+      <div class="memberCell">
+        <img src="images/unknown.jpeg" class="boardImg">
+        <p class="boardMember">Becky Stanfill</p>
+        <p class="boardRole">Foster Coordinator</p>
+      </div>
+
+      <div class="memberCell">
+        <img src="images/unknown.jpeg" class="boardImg">
+        <p class="boardMember">Nicki Arcangeli</p>
+        <p class="boardRole">Land Acquisition & Building Chairperson</p>
+      </div>
+
+      <div class="memberCell">
+        <img src="images/unknown.jpeg" class="boardImg">
+        <p class="boardMember">Nancy Box</p>
+        <p class="boardRole">Member</p>
+      </div>
+
+      <div class="memberCell">
+        <img src="images/unknown.jpeg" class="boardImg">
+        <p class="boardMember">Andrea Hawkinson</p>
+        <p class="boardRole">Member</p>
+      </div>
+
+      <div class="memberCell">
+        <img src="images/unknown.jpeg" class="boardImg">
+        <p class="boardMember">Kathy Melton</p>
+        <p class="boardRole">Member</p>
+      </div>
+    </article>
+  </section>
+  <footer>
+
+  </footer>
+
+  <!-- Donation Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modalContent">
+      <div class="modalHeader">
+        <p class="modalHeaderText">THANK YOU FOR YOUR DONATION</p>
+      </div>
+      <div class="modalBody">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="closeContainer">
+        <span class="close">Close &times;</span>
+      </div>
+    </div>
+
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("donateButton");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,275 @@
+:root {
+  --wwPurple: #845ec2;
+  --wwOrange: #ffc75f;
+  --wwYellow: #f9f871;
+  --wwRed: #ff5e78;
+  --textColor: #fff;
+  --wwShadow: 2px 3px 5px rgba(0, 0, 0, 0.45);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: 400;
+}
+
+html {
+  color: whitesmoke;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  display: inline-flexbox;
+  max-width: 80vw;
+  max-height: 100vh;
+  background-color: var(--wwPurple);
+  margin: 1rem auto;
+}
+
+header {
+  width: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.logo {
+  max-width: 200px;
+  max-height: 200px;
+  margin: auto;
+}
+
+section {
+  background-color: var(--wwOrange);
+  width: 100%;
+  min-height: 50px;
+  display: inline-flex;
+  margin-top: 1rem;
+}
+
+.contentSection {
+  display: block;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 1rem;
+  padding: 1rem;
+  text-shadow: var(--wwShadow);
+}
+
+article {
+  background-color: var(--wwPurple);
+  width: 45%;
+  min-height: 200px;
+  display: inline-flex;
+  flex-flow: wrap;
+  margin: 1rem auto;
+  box-shadow: var(--wwShadow);
+}
+
+.content {
+  display: inline-flex;
+}
+
+.image {
+  max-width: 200px;
+  max-height: 200px;
+  margin: auto;
+}
+
+.generalText {
+  word-wrap: break-word;
+  margin: 1rem;
+}
+
+.donateButton {
+  background-color: var(--wwRed);
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  max-height: 100px;
+  margin: auto;
+  transition: background-color 0.5s ease-in-out;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.donateButton:hover {
+  background-color: #fff;
+  color: var(--wwRed);
+}
+
+.donateButton:active {
+  background-color: var(--wwYellow);
+  transform: scale(0.9);
+}
+
+article.fullBoard {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+}
+
+.memberCell {
+  margin: 1rem;
+  padding: 1rem 0;
+  background-color: var(--textColor);
+  width: 275px;
+  height: 275px;
+  box-shadow: var(--wwShadow);
+  transition: background-color 0.5s ease-in-out;
+}
+
+.memberCell:hover {
+  background-color: #6f1ab6;
+}
+
+.boardImg {
+  height: 150px;
+  width: 150px;
+  margin: 1rem;
+}
+
+.boardMember {
+  font-size: 22;
+  font-weight: 600;
+  color: #001;
+  transition: color 0.5s ease-in-out;
+}
+
+.boardRole {
+  margin: 0.5rem;
+  font-size: 18;
+  color: #001;
+  transition: color 0.5s ease-in-out;
+}
+
+.memberCell:hover {
+  background-color: #6f1ab6;
+}
+
+.memberCell:hover > .boardRole,
+.memberCell:hover > .boardMember {
+  color: #fff;
+}
+
+@media only screen and (max-width: 500px) {
+  .donateButton {
+    margin-top: 1rem;
+  }
+
+  article {
+    background-color: var(--lightPurple);
+    width: 98%;
+    min-height: 45px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    margin: auto;
+    color: #001;
+  }
+
+  .content {
+    display: block;
+  }
+
+  .content > article {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+/*  */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Header */
+.modalHeader {
+  background-color: var(--darkPurple);
+  color: white;
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+}
+
+.modalHeader > p {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Modal Body */
+.modalBody {
+  padding: 1rem;
+  color: #001;
+}
+
+/* Modal Content */
+.modalContent {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 50%;
+  height: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+.closeContainer {
+  width: 100%;
+  text-align: center;
+  margin: 1rem;
+}
+.close {
+  color: var(--textColor);
+  margin: auto;
+  padding: 1rem;
+  background-color: #ff0032;
+  transition: background-color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+  transition: border 0.5s ease-in-out;
+}
+
+.close:hover {
+  cursor: pointer;
+  background-color: var(--textColor);
+  color: var(--lightRed);
+  border: 1px solid var(--lightRed);
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
