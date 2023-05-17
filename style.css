@@ -55,6 +55,7 @@ section {
 .contentSection {
   display: block;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .sectionTitle {
@@ -79,7 +80,7 @@ article {
   display: inline-flex;
 }
 
-.image {
+.generalImage {
   max-width: 200px;
   max-height: 200px;
   margin: auto;
@@ -159,18 +160,37 @@ article {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Fading animation */
+/* Fading animations */
+
 .fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+  animation-name: fadeIn;
+  animation-duration: 2s;
 }
 
-@keyframes fade {
+@keyframes fadeIn {
   from {
-    opacity: 0.4;
+    opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0.4;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.4;
   }
 }
 article.fullBoard {
@@ -185,10 +205,10 @@ article.fullBoard {
 
 .memberCell {
   margin: 1rem;
-  padding: 1rem 0;
+  /* padding: 1rem 0; */
   background-color: var(--textColor);
-  width: 275px;
-  height: 275px;
+  width: 18rem;
+  height: 18rem;
   box-shadow: var(--wwShadow);
   transition: background-color 0.5s ease-in-out;
 }
@@ -226,30 +246,27 @@ article.fullBoard {
   color: #fff;
 }
 
-@media only screen and (max-width: 500px) {
-  .donateButton {
-    margin-top: 1rem;
-  }
+.qrContainer {
+  width: 100%;
+  display: flex;
+}
 
-  article {
-    background-color: var(--lightPurple);
-    width: 98%;
-    min-height: 45px;
-    display: inline-flex;
-    flex-wrap: wrap;
-    border: 1px solid black;
-    margin: auto;
-    color: #001;
-  }
+.donateCell {
+  display: inline-block;
+  text-align: center;
+  margin: 1rem auto;
+}
 
-  .content {
-    display: block;
-  }
+.sectionSubTitle {
+  display: block;
+  font-size: 1.5rem;
+  text-shadow: var(--wwShadow);
+  margin: 1rem;
+}
 
-  .content > article {
-    border: none;
-    box-shadow: none;
-  }
+.donationQR {
+  display: block;
+  margin: 1rem 2rem 2rem 2rem;
 }
 
 footer {
@@ -328,11 +345,13 @@ footer {
   animation-name: animatetop;
   animation-duration: 0.4s;
 }
+
 .closeContainer {
   width: 100%;
   text-align: center;
   margin: 1rem;
 }
+
 .close {
   color: var(--textColor);
   margin: auto;
@@ -359,5 +378,54 @@ footer {
   to {
     top: 0;
     opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .donateButton {
+    margin-top: 1rem;
+  }
+
+  article {
+    background-color: var(--lightPurple);
+    width: 98%;
+    min-height: 45px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    margin: auto;
+    color: #001;
+  }
+
+  .content {
+    display: block;
+  }
+
+  .content > article {
+    border: none;
+    box-shadow: none;
+  }
+
+  .slideShowContainer {
+    margin: 0;
+    padding: 0;
+    width: 15rem;
+    height: 15rem;
+    border: none;
+    box-shadow: none;
+  }
+
+  .slideShow {
+    width: 100%;
+    height: 100%;
+  }
+
+  .slideImage {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  .memberCell {
+    height: auto;
   }
 }
