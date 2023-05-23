@@ -1,0 +1,340 @@
+/********************/
+/****** GLOBAL ******/
+/********************/
+
+:root {
+  --wwPurple: #845ec2;
+  --wwOrange: #ffc75f;
+  --wwYellow: #f9f871;
+  --wwRed: #ff5e78;
+  --textColor: #fff;
+  --wwShadow: 2px 3px 5px rgba(0, 0, 0, 0.45);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+html {
+  color: whitesmoke;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: auto;
+}
+
+body {
+  width: 80vw;
+  margin: auto;
+  background-color: #fff;
+}
+
+hr {
+  border-color: var(--wwPurple);
+  height: 10px;
+  border-width: 2;
+  margin: 1rem 0;
+  background-color: var(--wwPurple);
+  border-radius: 5px;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+/********************/
+/**** NAVIGATION ****/
+/********************/
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 12rem;
+  margin-top: 0.5rem;
+}
+
+.wwLogo {
+  display: flex;
+  position: absolute;
+  max-height: 12em;
+}
+
+nav {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  justify-content: baseline;
+}
+
+.socialsRow {
+  display: flex;
+  justify-content: end;
+  margin-top: auto;
+  width: 100%;
+  height: 65%;
+}
+
+.socialsRow > ul {
+  display: flex;
+}
+
+.socialsRow > ul > li {
+  display: flex;
+  text-align: center;
+  margin-left: 8px;
+  margin-top: auto;
+  height: 100%;
+}
+
+.socialsRow > ul > li > a {
+  margin-top: auto;
+}
+
+.socialImage {
+  display: flex;
+  height: 50px;
+  width: 50px;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+.donateButton {
+  background-color: var(--wwRed);
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  max-height: 100px;
+  margin: auto;
+  transition: background-color 0.5s ease-in-out;
+  transition: transform 0.5 ease-in-out;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.topButton {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: 10;
+}
+
+.donateButton:hover {
+  background-color: #fff;
+  color: var(--wwRed);
+  transform: scale(1.05);
+}
+
+.donateButton:active {
+  transform: scale(0.95);
+}
+
+.linksRow {
+  display: flex;
+  width: 100%;
+  height: 35%;
+  border: 1px solid black;
+  justify-content: end;
+  background-color: var(--wwPurple);
+  padding: 1rem 0;
+  border-radius: 0;
+  border-bottom-right-radius: 10;
+  z-index: 20;
+}
+
+.linksRow > ul {
+  display: flex;
+  background-color: var(--wwPurple);
+  width: 100%;
+  margin-left: auto;
+  text-decoration: none;
+  justify-content: end;
+}
+
+.linksRow > ul > li {
+  display: flex;
+  margin: auto 0.5rem;
+  text-decoration: none;
+  align-content: center;
+  justify-content: center;
+}
+
+.linksRow > ul > li > a {
+  margin: auto;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+section {
+  display: block;
+}
+
+.jumbo {
+  display: flex;
+  width: 100%;
+  height: 30vw;
+}
+
+.slideShowContainer {
+  display: inline-flex;
+  width: 70%;
+  height: 100%;
+}
+
+.slideShow {
+  /* display: none; */
+  text-align: center;
+  margin: 0;
+}
+
+.slideImage {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  object-fit: cover;
+}
+
+.cta {
+  display: inline-flex;
+  width: 30%;
+  height: 100%;
+  z-index: 50;
+  background-color: var(--wwOrange);
+}
+
+.ctaContainer {
+  margin: 2rem;
+  text-align: center;
+  align-items: center;
+}
+
+.ctaContainer > h2 {
+  margin: 1rem;
+  color: #000;
+}
+
+.verbage {
+  color: #000;
+  margin: 1rem;
+}
+
+.content {
+  display: inline-flex;
+  width: 100%;
+  height: 30vw;
+  background-color: #ffc75f;
+}
+
+.mainPoint {
+  height: 80%;
+  width: 20%;
+  border: 1px solid black;
+  background-color: var(--wwPurple);
+  margin: auto;
+  padding: 0.5rem;
+  text-align: center;
+  text-shadow: 2px 2px 5px black;
+}
+
+.mainPointImg {
+  width: 50%;
+  height: 30%;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin: 1rem 0;
+}
+
+.mainPoint > h2 {
+  margin-bottom: 1rem;
+}
+
+.board {
+  width: 100%;
+  height: 30vw;
+  background-color: #ff5e78;
+}
+
+.finalCTA {
+  width: 100%;
+  height: 30vw;
+  background-color: var(--wwPurple);
+}
+
+/*******************/
+/****** MODAL ******/
+/*******************/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/********************/
+/**** ANIMATIONS ****/
+/********************/
+.fade {
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/*******************/
+/****** MODAL ******/
+/*******************/
+
+@media only screen and (max-width: 500px) {
+}

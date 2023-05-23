@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style-new.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!-- PayPall SDK -->
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=AS5E4QWXjJm01aymFL8HowqDBJDLbWhNuy0rYoFMBAmq5HXHnR7L-Yz5aLFx-wA8i1vRM3BvEmqVsG3Q&components=buttons&currency=USD&enable-funding=venmo,card,credit&locale=en_US">
+    </script>
+
+  <!-- CashApp Pay Kit SDK -->
+  <script src="https://sandbox.kit.cash.app/v1/pay.js"></script>
+  <title>Wags and Whiskers Animal Shelter</title>
+</head>
+
+<body>
+  <header>
+    <img src="images/badLogo.png" class="wwLogo">
+    <nav>
+      <div class="socialsRow">
+        <ul>
+          <li>
+            <a href="">
+              <img src="images/facebook.svg" class="socialImage">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="images/instagram.svg" class="socialImage">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <button class="donateButton topButton" id="donateButton" onclick="showModal()">
+                Donate Now ♥
+              </button>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="linksRow">
+        <ul>
+          <li>
+            <a href="#">
+              Our Mission
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Our People
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Your Family
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section class="jumbo">
+    <article class="slideShowContainer" id="slideShowContainer">
+      <div class="slideShow fadeOut">
+        <img src="images/pup1.jpg" alt="" class="slideImage">
+      </div>
+      <div class="slideShow fade fadeOut">
+        <img src="images/kitten3.jpg" alt="" class="slideImage">
+      </div>
+      <div class="slideShow fade fadeOut">
+        <img src="images/pup10.jpg" alt="" class="slideImage">
+      </div>
+      <div class="slideShow fade fadeOut">
+        <img src="images/kitten4.jpg" alt="" class="slideImage">
+      </div>
+    </article>
+
+    <article class="cta">
+      <div class="ctaContainer glass">
+        <h2>We Need Your Support</h2>
+        <p class="verbage">
+          Every little bit helps us get closer to meeting our goal of purchasing property in Decatur County.
+        </p>
+        <p class="verbage">
+          Help us build a home for the homeless animals of Decatur County.
+        </p>
+        <button class="donateButton" id="donateButton" onclick="showModal()">
+          Donate Now 🐾
+        </button>
+      </div>
+    </article>
+
+  </section>
+
+  <hr>
+
+  <section class="content">
+    <article class="mainPoint">
+      <img src="" class="mainPointImg">
+      <h2>Main Point</h2>
+      <p>Things about the main point</p>
+    </article>
+    <article class="mainPoint">
+      <img src="" class="mainPointImg">
+      <h2>Main Point</h2>
+      <p>Things about the main point</p>
+    </article>
+    <article class="mainPoint">
+      <img src="" class="mainPointImg">
+      <h2>Main Point</h2>
+      <p>Things about the main point</p>
+    </article>
+  </section>
+  <hr>
+  <section class="board">
+    <article>
+
+    </article>
+  </section>
+  <hr>
+  <section class="finalCTA">
+    <article>
+
+    </article>
+  </section>
+  <footer>
+
+  </footer>
+  <!-- Donation Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modalContent">
+      <div class="modalHeader">
+        <p class="modalHeaderText">THANK YOU FOR YOUR DONATION</p>
+      </div>
+      <div class="modalBody">
+        <p class="donationOptionLabel">Donate with PayPal</p>
+        <div id="donate-button-container" class="buttonContainer">
+          <div id="donate-button" class="donateOptionButton"></div>
+          <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+          <script>
+            PayPal.Donation.Button({
+              env: 'production',
+              hosted_button_id: 'T95GLYB4FV5ZA',
+              image: {
+                src: 'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
+                alt: 'Donate with PayPal button',
+                title: 'PayPal - The safer, easier way to pay online!',
+              }
+            }).render('#donate-button');
+          </script>
+        </div>
+
+        <p class="donationOptionLabel">or With CashApp</p>
+        <div class="buttonContainer">
+          <button class="donateOptionButton" id="#cashAppDonate" onclick="cashAppSelected()"><img
+              src="images/cashapp.png" alt="" class="cashAppLogo"></button>
+        </div>
+      </div>
+      <div class="closeContainer">
+        <span class="close">Close &times;</span>
+      </div>
+    </div>
+    <!-- <script src="site.js">document.onload(showSlides)</script> -->
+</body>
+
+</html>
