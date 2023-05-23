@@ -35,6 +35,7 @@ html {
   color: whitesmoke;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: auto;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -60,6 +61,7 @@ hr {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
 /********************/
 /**** NAVIGATION ****/
 /********************/
@@ -84,6 +86,8 @@ nav {
   height: 100%;
   justify-content: baseline;
 }
+
+/**** SOCIAL MEDIA + DONATE BUTTON ****/
 
 .socialsRow {
   display: flex;
@@ -123,9 +127,8 @@ nav {
   color: #fff;
   border-radius: 10px;
   max-height: 100px;
-  margin: auto;
+  margin-left: 1rem;
   transition: background-color 0.5s ease-in-out;
-  transition: transform 0.5 ease-in-out;
   padding: 1rem;
   font-weight: 600;
   font-size: 1.5rem;
@@ -140,13 +143,13 @@ nav {
 .donateButton:hover {
   background-color: #fff;
   color: var(--wwRed);
-  transform: scale(1.05);
 }
 
 .donateButton:active {
   transform: scale(0.95);
 }
 
+/**** NAVIGATION LINKS ****/
 .linksRow {
   display: flex;
   width: 100%;
@@ -165,6 +168,7 @@ nav {
   background-color: var(--wwPurple);
   width: 100%;
   margin-left: auto;
+  margin-right: 1rem;
   text-decoration: none;
   justify-content: end;
 }
@@ -180,8 +184,18 @@ nav {
 .linksRow > ul > li > a {
   margin: auto;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
+
+.linksRow > ul > li > a:hover {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/**************/
+/**** BODY ****/
+/**************/
+
+/**** JUMBO + CTA ****/
 
 section {
   display: block;
@@ -200,7 +214,6 @@ section {
 }
 
 .slideShow {
-  /* display: none; */
   text-align: center;
   margin: 0;
 }
@@ -212,6 +225,7 @@ section {
   object-fit: cover;
 }
 
+/* CALL TO ACTION */
 .cta {
   display: inline-flex;
   width: 30%;
@@ -227,14 +241,20 @@ section {
 }
 
 .ctaContainer > h2 {
-  margin: 1rem;
+  margin: 2rem 1rem 1rem 1rem;
   color: #000;
+}
+
+.ctaContainer > .donateButton {
+  margin: 1rem;
 }
 
 .verbage {
   color: #000;
   margin: 1rem;
 }
+
+/**** MISSION STATEMENTS ****/
 
 .content {
   display: inline-flex;
@@ -252,6 +272,8 @@ section {
   padding: 0.5rem;
   text-align: center;
   text-shadow: 2px 2px 5px black;
+  transition: background-color 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .mainPointImg {
@@ -266,16 +288,113 @@ section {
   margin-bottom: 1rem;
 }
 
+.learnMore {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  bottom: 0;
+  text-shadow: 2px 2px 5px black;
+  cursor: pointer;
+}
+
+.mainPoint:hover {
+  background-color: #6f1ab6;
+  transform: scale(1.05);
+}
+
+/**** BOARD ****/
+
 .board {
   width: 100%;
-  height: 30vw;
-  background-color: #ff5e78;
+  min-height: 30vw;
+  background-color: var(--wwOrange);
 }
+
+article.fullBoard {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.memberCell {
+  margin: 1rem;
+  width: 14rem;
+  height: 14rem;
+  background-color: var(--wwPurple);
+  box-shadow: var(--wwShadow);
+  transition: background-color 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+}
+
+.memberCell:hover {
+  background-color: #6f1ab6;
+}
+
+.boardImg {
+  height: 100px;
+  width: 100px;
+  margin: 1rem;
+}
+
+.boardMember {
+  font-size: 22;
+  font-weight: 600;
+  color: #fff;
+  transition: color 0.5s ease-in-out;
+}
+
+.boardRole {
+  margin: 0.5rem;
+  font-size: 18;
+  color: #fff;
+  transition: color 0.5s ease-in-out;
+}
+
+.memberCell:hover {
+  background-color: #6f1ab6;
+  transform: scale(1.02);
+}
+
+.memberCell:hover > .boardRole,
+.memberCell:hover > .boardMember {
+  color: #fff;
+}
+
+/**** FAMILY ****/
+
+.family {
+  width: 100%;
+  min-height: 30vw;
+  background-color: var(--wwOrange);
+}
+
+/**** FINAL CTA ****/
 
 .finalCTA {
   width: 100%;
   height: 30vw;
-  background-color: var(--wwPurple);
+  background-color: var(--wwOrange);
+}
+
+/**** FOOTER ****/
+
+footer {
+  margin: 1rem 0;
+  color: #000;
+}
+
+footer > a {
+  margin: 1rem 0;
+  color: #000;
+  text-decoration: underline;
+}
+
+footer > a:hover {
+  color: var(--wwPurple);
 }
 
 /*******************/
@@ -332,9 +451,9 @@ section {
   }
 }
 
-/*******************/
-/****** MODAL ******/
-/*******************/
+/********************/
+/****** MOBILE ******/
+/********************/
 
 @media only screen and (max-width: 500px) {
 }
