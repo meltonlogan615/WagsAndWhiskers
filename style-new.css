@@ -78,6 +78,11 @@ header {
   display: flex;
   position: absolute;
   max-height: 12em;
+  background-color: var(--wwPurple);
+  padding: 0.5rem;
+  border-top-left-radius: 8;
+  border-top-right-radius: 8;
+  object-fit: contain;
 }
 
 nav {
@@ -128,25 +133,23 @@ nav {
   border-radius: 10px;
   max-height: 100px;
   transition: background-color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
   padding: 1rem;
   font-weight: 600;
   font-size: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 .topButton {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   z-index: 10;
+  margin-top: auto;
   margin-left: 1rem;
 }
 
 .donateButton:hover {
-  background-color: #fff;
-  color: var(--wwRed);
-}
-
-.donateButton:active {
-  transform: scale(0.95);
+  cursor: pointer;
 }
 
 /**** NAVIGATION LINKS ****/
@@ -247,6 +250,16 @@ section {
 
 .ctaContainer > .donateButton {
   margin: 1rem;
+}
+
+.ctaContainer > .donateButton:hover {
+  background-color: #fff;
+  color: var(--wwRed);
+  transform: scale(1.02);
+}
+
+.ctaContainer > .donateButton:active {
+  transform: scale(0.95);
 }
 
 .verbage {
@@ -367,9 +380,47 @@ article.fullBoard {
 /**** FAMILY ****/
 
 .family {
+  display: flex;
+  justify-content: space-around;
   width: 100%;
   min-height: 30vw;
   background-color: var(--wwOrange);
+}
+
+.roundUpImage {
+  width: 40%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.roundUpImage img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.roundUpVerbage {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+}
+
+.roundUpVerbage h2 {
+  color: #000;
+  margin: 2rem 1rem 1rem 1rem;
+}
+
+.roundUpVerbage p {
+  color: #000;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.roundUpVerbage p > a {
+  color: #000;
+  text-decoration: underline;
+  padding: 1rem;
+  font-weight: 600;
 }
 
 /**** FINAL CTA ****/
@@ -400,10 +451,11 @@ footer > a:hover {
 /*******************/
 /****** MODAL ******/
 /*******************/
+
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   padding-top: 100px;
   left: 0;
   top: 0;
@@ -412,6 +464,117 @@ footer > a:hover {
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
+  color: #000;
+}
+
+.modalContent {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 50%;
+  height: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Modal Header */
+.modalHeader {
+  background-color: var(--wwPurple);
+  color: white;
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+}
+
+.modalHeaderText {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Modal Body */
+.modalBody {
+  padding: 1rem;
+  color: #001;
+  text-align: center;
+}
+
+.modalContent {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 50%;
+  height: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+.modalHeader {
+  background-color: var(--wwPurple);
+  color: white;
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+}
+
+.modalHeaderText {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  padding: 1rem;
+}
+
+.donationOptionLabel {
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.buttonContainer {
+  margin: 1rem;
+}
+
+.donateOptionButton {
+  height: 2rem;
+  background-color: transparent;
+  border: none;
+}
+
+.cashAppLogo {
+  height: 2rem;
+  width: 12rem;
+  background-color: transparent;
+}
+
+.cashAppLogo:hover {
+  cursor: pointer;
+}
+
+.closeContainer {
+  width: 100%;
+  text-align: center;
+  margin: 1rem;
+}
+
+.close {
+  color: var(--textColor);
+  margin: auto;
+  padding: 1rem;
+  background-color: var(--wwRed);
+  transition: background-color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+  transition: border 0.5s ease-in-out;
+}
+
+.close:hover {
+  cursor: pointer;
+  scale: 1.2;
 }
 
 /********************/
@@ -458,11 +621,11 @@ footer > a:hover {
 
 @media only screen and (max-width: 500px) {
   body {
-    /* display: block; */
+    display: block;
   }
 
   header {
-    /* display: block; */
+    display: block;
     height: auto;
   }
 
@@ -472,7 +635,8 @@ footer > a:hover {
   }
 
   nav {
-    display: block;
+    display: none;
+    /* display: block; */
     width: 100%;
   }
 
@@ -482,27 +646,30 @@ footer > a:hover {
   }
 
   .socialsRow > ul {
-    display: flex;
+    display: block;
+    /* display: flex; */
   }
 
   .socialsRow > ul > li {
     width: auto;
-    height: 100%;
+    height: auto;
     margin: 0;
   }
 
   .socialsRow > ul > li > a {
     display: inline-flex;
     border: 1px solid black;
-    height: 100%;
+    height: auto;
   }
 
   .socialImage {
     height: 100%;
     width: 100%;
   }
+
   .topButton {
     border-radius: 0;
+    width: 100%;
   }
 
   .linksRow {
@@ -511,6 +678,7 @@ footer > a:hover {
 
   .jumbo {
     display: block;
+    height: auto;
   }
 
   .slideShowContainer {
@@ -523,7 +691,6 @@ footer > a:hover {
     height: auto;
     width: 100%;
     padding: 1rem 0;
-    opacity: 0.5;
   }
 
   .ctaContainer {
@@ -537,7 +704,6 @@ footer > a:hover {
     height: auto;
     display: block;
     padding: 1rem 0;
-    background-color: aqua;
     border: 2px solid black;
   }
 
@@ -547,10 +713,28 @@ footer > a:hover {
   }
 
   .mainPointImg {
-    display: none;
+    width: 50%;
   }
 
   .board {
-    display: none;
+    /* display: none; */
+  }
+
+  .family {
+    display: block;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .roundUpImage {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 1rem auto;
+  }
+
+  .roundUpVerbage {
+    width: 80%;
+    margin: 1rem auto;
   }
 }

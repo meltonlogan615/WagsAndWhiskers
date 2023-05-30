@@ -1,0 +1,207 @@
+* {
+  color: black;
+}
+
+header {
+  display: flex;
+  height: 20rem;
+}
+
+.headerLeft {
+  width: 65%;
+  background-color: var(--wwPurple);
+  display: flex;
+}
+
+.headerLeftContent {
+  margin: auto;
+  color: black;
+  width: 64%;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.headerRight {
+  width: 32%;
+  background-color: var(--wwOrange);
+  margin-left: 2rem;
+  display: flex;
+}
+
+.headerRightContent {
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+main {
+  margin-top: 2rem;
+  display: flex;
+}
+
+.mainContent {
+  width: 65%;
+  display: block;
+}
+
+/*************************/
+/****** FORM HEADER ******/
+/*************************/
+
+.formHeader {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.formVerbage {
+  font-size: 1.5rem;
+}
+
+/******************/
+/****** FORM ******/
+/******************/
+
+.formContent {
+  display: flex;
+  width: 65%;
+}
+
+.inputSection {
+  margin-top: 1rem;
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+.textField {
+  margin-top: 0.5rem;
+  height: 2rem;
+}
+
+.textField > input {
+  height: 100%;
+  width: 80%;
+  font-size: 1.5rem;
+  color: black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-width: 2px;
+  border-color: var(--wwPurple);
+}
+
+.textField > input:active {
+  border: none;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  padding-left: 35px;
+  margin: 1rem 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: var(--wwPurple);
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.donateButton {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  box-shadow: var(--wwShadow);
+}
+
+/************************/
+/****** RIGHT SIDE ******/
+/************************/
+
+.mainContentRight {
+  margin-left: 2rem;
+  display: block;
+  width: 32%;
+  text-align: center;
+}
+
+address {
+  text-decoration: none;
+  font-style: normal;
+}
+
+address > p {
+  margin: 1rem 0;
+}
+
+.wwAddress {
+  width: 100%;
+  padding: 2rem 1rem;
+  background-color: var(--wwPurple);
+}
+
+.wwAddress > p {
+  font-size: 1.5rem;
+}
+
+.luAddress {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 2rem 1rem;
+  background-color: var(--wwOrange);
+}
+
+.luAddress > p {
+  font-size: 1.5rem;
+}
+
+.accent {
+  font-weight: 600;
+}

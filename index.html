@@ -25,7 +25,7 @@
 
 <body>
   <header>
-    <img src="images/badLogo.png" class="wwLogo">
+    <img src="images/newLogo-dark.png" class="wwLogo">
     <nav>
       <div class="socialsRow">
         <ul>
@@ -41,11 +41,11 @@
             </a>
           </li>
           <li>
-            <a href="">
-              <button class="donateButton topButton" id="donateButton" onclick="showModal()">
-                Donate Now ♥
-              </button>
-            </a>
+
+            <button class="donateButton topButton" id="donateButton" onclick="showModal()">
+              Donate Now ♥
+            </button>
+
           </li>
         </ul>
       </div>
@@ -187,12 +187,31 @@
   <hr id="family">
 
   <section class="family">
+    <article class="roundUpImage">
+      <img src="images/lesLogo.png">
+
+    </article>
+    <article class="roundUpVerbage glass">
+      <h2>ROUND UP WITH LEXINGTON ELECTRIC</h2>
+      <p class="">
+        Lexington Electric or Utility customers can now choose to have their bill rounded up to the nearest
+        $, so that the difference is donated to Wags & Whiskers, a non-profit organization working to raise funds for an
+        animal
+        shelter in Decatur County.
+      </p>
+      <p>
+
+        <a href="roundUpForm.html" target="_blank">Learn More</a>
+      </p>
+    </article>
+  </section>
+
+  <hr>
+
+  <section class="finalCTA">
     <article>
 
     </article>
-  </section>
-  <hr>
-  <section class="finalCTA">
     <article>
 
     </article>
@@ -200,12 +219,14 @@
   <footer>
     Developed by <a href="https://www.meltonlogan.me">Logan Melton</a>
   </footer>
+
+
   <!-- Donation Modal -->
   <div id="myModal" class="modal">
     <!-- Modal content -->
     <div class="modalContent">
       <div class="modalHeader">
-        <p class="modalHeaderText">THANK YOU FOR YOUR DONATION</p>
+        <p class="modalHeaderText">THANK YOU FOR YOUR SUPPORT</p>
       </div>
       <div class="modalBody">
         <p class="donationOptionLabel">Donate with PayPal</p>
@@ -232,9 +253,10 @@
         </div>
       </div>
       <div class="closeContainer">
-        <span class="close">Close &times;</span>
+        <span class="close" onclick="closeModal()">Close &times;</span>
       </div>
     </div>
+    <script src="site.js"></script>
 </body>
 
 </html>
