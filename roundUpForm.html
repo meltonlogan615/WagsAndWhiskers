@@ -31,7 +31,8 @@
     <div class="mainContent">
       <article class="formHeader">
         <p class="formVerbage">
-          Lexington Electric or Utility customers can now choose to have their bill rounded up to the nearest $, so that
+          Lexington Electric or Utility customers can now choose to have their bill rounded up to the nearest whole
+          dollar amount, so that
           the
           difference is donated to Wags & Whiskers, a non-profit organization working to raise funds for an animal
           shelter
@@ -46,13 +47,19 @@
         </p>
       </article>
       <article class="formContent">
-        <form>
+        <form method="post" name="roundUpForm" action="https://api.web3forms.com/submit">
+          <input type="hidden" name="access_key" value="6d795562-98e5-4d40-bf9d-a261ee43e18b">
+
+          <input type="hidden" name="from_name" value="Wags And Whiskers">
+          <input type="hidden" name="subject" value="Round Up Form Submission">
+          <input type="hidden" name="replyto" value="WagsandWhiskersTenn@gmail.com" />
+          <input type="hidden" name="redirect" value="https://meltonlogan615.github.io/WagsAndWhiskers/">
           <div class="inputSection">
             <p>
-              <label for="name">Your Name:</label>
+              <label for="name">Name On Account:</label>
             </p>
             <p class="textField">
-              <input type="text" for="name" id="" placeholder="Fuzzy Critter">
+              <input type="text" for="name" name="name" placeholder="Fuzzy Critter" required>
             </p>
           </div>
 
@@ -61,7 +68,7 @@
               <label for="serviceAddress">Service Address:</label>
             </p>
             <p class="textField">
-              <input type="text" for="serviceAddress" id="" placeholder="P.O. Box 233">
+              <input type="text" for="serviceAddress" name="serviceAddress" placeholder="P.O. Box 233" required>
             </p>
           </div>
 
@@ -70,7 +77,7 @@
               <label for="cityStateZip">City, State, Zip Code:</label>
             </p>
             <p class="textField">
-              <input type="text" name="cityStateZip" id="" placeholder="Decaturville, TN 38329">
+              <input type="text" for="cityStateZip" name="cityStateZip" placeholder="Decaturville, TN 38329" required>
             </p>
           </div>
 
@@ -79,7 +86,16 @@
               <label for="phone">Phone #:</label>
             </p>
             <p class="textField">
-              <input type="text" name="phone" id="" placeholder="(123) 456-7890">
+              <input type="text" for="phone" name="phone" placeholder="(123) 456-7890" required>
+            </p>
+          </div>
+
+          <div class="inputSection">
+            <p>
+              <label for="email">Email Address:</label>
+            </p>
+            <p class="textField">
+              <input type="text" for="email" name="email" placeholder="example@email.com" required>
             </p>
           </div>
 
@@ -90,18 +106,19 @@
             <p>
             <div class="checkboxes">
               <label class="container">Lexington Electric
-                <input type="checkbox" checked="checked">
+                <input type="checkbox" for="roundUpElectric" name="roundUpElectric" checked="checked">
                 <span class="checkmark"></span>
               </label>
 
               <label class="container">Lexington Utilities
-                <input type="checkbox">
+                <input type="checkbox" for="roundUpUtilities" name="roundUpUtilities">
                 <span class="checkmark"></span>
               </label>
             </div>
             </p>
           </div>
-          <button type="submit" name="submit" id="" class="donateButton">
+          <!-- <div class="h-captcha" data-captcha="true"></div> -->
+          <button type="submit" name="submit" id="submit" value="Send Form" class="donateButton">
             Submit
           </button>
         </form>
@@ -133,6 +150,13 @@
     </div>
   </main>
   <footer></footer>
+  <script src="https://web3forms.com/client/script.js" async defer></script>
+  <script>
+    var btn = document.getElementById("submit")
+    btn.onclick = function () {
+      alert("THANK YOU FOR YOUR SUPPORT!\n\nYour Round Up form has been submitted. \n\nClick 'Close' to return to the main page.")
+    }
+  </script>
 </body>
 
 </html>

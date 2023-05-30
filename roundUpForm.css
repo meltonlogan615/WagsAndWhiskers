@@ -2,6 +2,14 @@
   color: black;
 }
 
+html {
+  background-color: #eee;
+}
+
+body {
+  background-color: #eee;
+}
+
 header {
   display: flex;
   height: 20rem;
@@ -15,11 +23,11 @@ header {
 
 .headerLeftContent {
   margin: auto;
-  color: black;
   width: 64%;
   text-align: center;
   font-size: 4rem;
   font-weight: 600;
+  color: #eee;
 }
 
 .headerRight {
@@ -34,7 +42,7 @@ header {
   width: 80%;
   text-align: center;
   font-size: 2.5rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 main {
@@ -92,6 +100,7 @@ label {
   border-right: none;
   border-bottom-width: 2px;
   border-color: var(--wwPurple);
+  padding-left: 0.25rem;
 }
 
 .textField > input:active {
@@ -123,7 +132,7 @@ label {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #eee;
+  background-color: #fff;
 }
 
 .container:hover input ~ .checkmark {
@@ -189,6 +198,7 @@ address > p {
 
 .wwAddress > p {
   font-size: 1.5rem;
+  color: #eee;
 }
 
 .luAddress {
