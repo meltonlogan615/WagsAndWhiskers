@@ -229,6 +229,10 @@ section {
   object-fit: cover;
 }
 
+.slideShow img:hover {
+  transform: scale(1.05);
+}
+
 /* CALL TO ACTION */
 .cta {
   display: inline-flex;
