@@ -8,6 +8,9 @@ html {
 
 body {
   background-color: #eee;
+  @page {
+    size: 8.5in 11in;
+  }
 }
 
 header {
@@ -214,4 +217,8 @@ address > p {
 
 .accent {
   font-weight: 600;
+}
+
+.printReady {
+  display: none;
 }

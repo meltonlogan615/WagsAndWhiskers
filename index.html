@@ -25,21 +25,21 @@
 
 <body>
   <header>
-    <img src="images/newLogo-dark.png" class="wwLogo">
+    <img src="images/newLogo-dark.png" class="wwLogo" alt="Wags and Whiskers Logo">
     <nav>
       <div class="socialsRow">
         <ul>
           <li>
             <a href="https://www.facebook.com/people/Wags-and-Whiskers-Animal-Shelter/100089447746306/?mibextid=LQQJ4d"
               target="_blank">
-              <img src="images/facebook.svg" class="socialImage">
+              <img src="images/facebook.svg" alt="facebook 'f' logo" class="socialImage">
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a href="">
               <img src="images/instagram.svg" class="socialImage">
             </a>
-          </li>
+          </li> -->
           <li>
 
             <button class="donateButton topButton" id="donateButton" onclick="showModal()">
@@ -63,7 +63,7 @@
           </li>
           <li>
             <a href="#family">
-              Your Family
+              Our Community
             </a>
           </li>
         </ul>
@@ -74,16 +74,16 @@
   <section class="jumbo">
     <article class="slideShowContainer">
       <div class="slideShow">
-        <img src="images/pup1.jpg" alt="" class="slideImage">
+        <img src="images/pup1.jpg" alt="white a brindle pup being rather attentive" class="slideImage">
       </div>
       <div class="slideShow">
-        <img src="images/kitten1.jpg" alt="" class="slideImage">
+        <img src="images/kitten1.jpg" alt="small gray tabby kitten" class="slideImage">
       </div>
       <div class="slideShow">
-        <img src="images/pup7.jpg" alt="" class="slideImage">
+        <img src="images/pup7.jpg" alt="brown pup with white paws laying in the grass" class="slideImage">
       </div>
       <div class="slideShow">
-        <img src="images/kitten6.jpg" alt="" class="slideImage">
+        <img src="images/kitten6.jpg" alt="black kitten, nothing but good luck" class="slideImage">
       </div>
     </article>
 
@@ -94,7 +94,10 @@
           Every little bit helps us get closer to meeting our goal of purchasing property in Decatur County.
         </p>
         <p class="verbage">
-          Help us build a home for the homeless critters of Decatur County.
+          As a 501(c)(3), we depend on contributions from our community to operate.
+        </p>
+        <p class="verbage">
+          Please help us build a home for the homeless critters of Decatur County.
         </p>
         <button class="donateButton glass" id="donateButton" onclick="showModal()">
           Donate Now 🐾
@@ -111,7 +114,9 @@
         <table>
           <tbody>
             <tr>
-              <img src="" class=" mainPointImg">
+              <div class="mainPointImageContainer">
+                <p class="mainPointImage">I</p>
+              </div>
             </tr>
             <tr>
               <h2>Serving God</h2>
@@ -127,11 +132,30 @@
                 Proverbs 12:10
               </p>
             </tr>
-            <tr>
-              <!-- <div class="learnMoreContainer">
-                <button class="learnMoreButton">Learn More</button>
-              </div> -->
+          </tbody>
+        </table>
+      </div>
 
+      <div class="mainPoint glass">
+        <table>
+          <tbody>
+            <tr>
+              <div class="mainPointImageContainer">
+                <p class="mainPointImage">II</p>
+              </div>
+            </tr>
+            <tr>
+              <h2>Building Families</h2>
+            </tr>
+            <tr>
+              <p class="mainPointQuote">
+                28% of Dogs and 31% of cats are adpoted out of shelters each year.
+              </p>
+            </tr>
+            <tr>
+              <p class="mainPointCitation">
+                Humane Society
+              </p>
             </tr>
           </tbody>
         </table>
@@ -141,50 +165,25 @@
         <table>
           <tbody>
             <tr>
-              <img src="" class=" mainPointImg">
+              <div class="mainPointImageContainer">
+                <p class="mainPointImage">III</p>
+              </div>
+              <!-- <img src="" class=" mainPointImg"> -->
             </tr>
             <tr>
-              <h2>Serving God</h2>
+              <h2>Changing Lives</h2>
             </tr>
             <tr>
-              <p>
-                "The godly care for their animals, but the wicked are always cruel."
+              <p class="mainPointQuote">
+                Spending time with pets can help reduce stress and anxiety, improved mood and
+                decreased depression.
               </p>
             </tr>
             <tr>
-              <p>Proverbs 12:10</p>
-            </tr>
-            <tr>
-              <div class="learnMoreContainer">
-                <button class="learnMoreButton">Learn More</button>
-              </div>
-
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="mainPoint glass">
-        <table>
-          <tbody>
-            <tr>
-              <img src="" class=" mainPointImg">
-            </tr>
-            <tr>
-              <h2>Serving God</h2>
-            </tr>
-            <tr>
-              <p>
-                "The godly care for their animals, but the wicked are always cruel."
+              <p class="mainPointCitation">
+                <a href="https://sbmag.net/physical-and-mental-benefits-of-being-a-pet-owner/" target="_blank">SB
+                  Magazine Online</a>
               </p>
-            </tr>
-            <tr>
-              <p>Proverbs 12:10</p>
-            </tr>
-            <tr>
-              <div class="learnMoreContainer">
-                <button class="learnMoreButton">Learn More</button>
-              </div>
-
             </tr>
           </tbody>
         </table>
@@ -198,49 +197,49 @@
   <section class="board">
     <article class="fullBoard">
       <div class="memberCell glass">
-        <img src="images/unknown.jpeg" class="boardImg">
+        <img src="images/unknown.jpeg" class="boardImg" alt="board member image missing">
         <p class="boardMember">Cheryl Sparkman</p>
         <p class="boardRole">President</p>
       </div>
 
       <div class="memberCell glass">
-        <img src="images/unknown.jpeg" class="boardImg">
+        <img src="images/unknown.jpeg" class="boardImg" alt="board member image missing">
         <p class="boardMember">Nancy Box</p>
         <p class="boardRole">Secretary</p>
       </div>
 
       <div class="memberCell glass">
-        <img src="images/unknown.jpeg" class="boardImg">
+        <img src="images/unknown.jpeg" class="boardImg" alt="board member image missing">
         <p class="boardMember">Amy Bawcum</p>
         <p class="boardRole">CPA</p>
       </div>
 
       <div class="memberCell glass">
-        <img src="images/unknown.jpeg" class="boardImg">
+        <img src="images/unknown.jpeg" class="boardImg" alt="board member image missing">
         <p class="boardMember">Betty Butler Maness</p>
         <p class="boardRole">Fundraising Chairperson</p>
       </div>
 
       <div class="memberCell glass">
-        <img src="images/unknown.jpeg" class="boardImg">
+        <img src="images/unknown.jpeg" class="boardImg" alt="board member image missing">
         <p class="boardMember">Becky Stanfill</p>
         <p class="boardRole">Foster Coordinator</p>
       </div>
 
       <div class="memberCell glass">
-        <img src="images/unknown.jpeg" class="boardImg">
+        <img src="images/unknown.jpeg" class="boardImg" alt="board member image missing">
         <p class="boardMember">Andrea Hawkinson</p>
         <p class="boardRole">Member</p>
       </div>
 
       <div class="memberCell glass">
-        <img src="images/unknown.jpeg" class="boardImg">
+        <img src="images/unknown.jpeg" class="boardImg" alt="board member image missing">
         <p class="boardMember">Kathy Melton</p>
         <p class="boardRole">Member</p>
       </div>
 
       <div class="memberCell glass">
-        <img src="images/unknown.jpeg" class="boardImg">
+        <img src="images/unknown.jpeg" class="boardImg" alt="board member image missing">
         <p class="boardMember">Kristen Ohlunbender</p>
         <p class="boardRole">Member</p>
       </div>
@@ -251,7 +250,7 @@
 
   <section class="family">
     <article class="roundUpImage">
-      <img src="images/lesLogo.png">
+      <img src="images/lesLogo.png" alt="Lexington Electric System logo">
 
     </article>
     <article class="roundUpVerbage glass">
@@ -272,15 +271,45 @@
   <hr>
 
   <section class="finalCTA">
-    <article>
-
+    <article class="cta">
+      <div class="ctaContainer glass">
+        <h2>It Will Take A Village</h2>
+        <p class="verbage">
+          All that we have accomplished so far, has been the direct result community members coming together with the
+          shared belief that we can do better for abandoned and stray animals in Decatur County.
+        </p>
+        <p class="verbage">
+          Won't you please join us in fulfilling our mission?
+        </p>
+        <button class="donateButton glass" id="donateButton" onclick="showModal()">
+          Donate Now 🐾
+        </button>
+      </div>
     </article>
-    <article>
-
+    <article class="cta">
+      <div class="ctaContainer glass">
+        <h2>Follow Us On Facebook</h2>
+        <p class="verbage">
+          For the latest information on pets that are available to adopt, events, or other opportunities to volunteer,
+          please visit us on Facebook for the most up to date information.
+        </p>
+        <p class="ctaImageContainer">
+          <a href="https://www.facebook.com/people/Wags-and-Whiskers-Animal-Shelter/100089447746306/?mibextid=LQQJ4d"
+            target="_blank">
+            <img src="images/Facebook-full.png" alt="facebook logo">
+          </a>
+        </p>
+      </div>
     </article>
   </section>
   <footer>
-    Developed by <a href="https://www.meltonlogan.me">Logan Melton</a>
+    <p>
+      &copy Copyright 2023 Wags and Whiskers Animal Shelter. All trademarks mentioned are the property of their
+      respective owners.
+    </p>
+    <p>
+      Designed & Developed by <a href="https://www.meltonlogan.me">Logan Melton</a>
+    </p>
   </footer>
 
 
@@ -299,7 +328,7 @@
           <script>
             PayPal.Donation.Button({
               env: 'production',
-              hosted_button_id: 'T95GLYB4FV5ZA',
+              hosted_button_id: 'LCAL8WNLJ9LUW',
               image: {
                 src: 'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
                 alt: 'Donate with PayPal button',
@@ -313,7 +342,7 @@
         <div class="buttonContainer">
           <a href="https://www.gofundme.com/f/establish-decatur-countys-first-animal-shelter" target="_blank">
             <button class="donateOptionButton" id="#goFundMe">
-              <img src="images/GoFundMe_logo.png" alt="" class="goFundMeLogo">
+              <img src="images/GoFundMe_logo.png" alt="Go Fund Me Logo" class="goFundMeLogo">
             </button>
           </a>
         </div>

@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style-new.css">
   <link rel="stylesheet" href="roundUpForm.css">
+  <link rel="stylesheet" media="print" href="print.css">
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
@@ -58,8 +59,11 @@
             <p>
               <label for="name">Name On Account:</label>
             </p>
-            <p class="textField">
+            <p class="textField webReady">
               <input type="text" for="name" name="name" placeholder="Fuzzy Critter" required>
+            </p>
+            <p class="textField printReady">
+              <input type="text" for="name" name="name" required>
             </p>
           </div>
 
@@ -67,8 +71,11 @@
             <p>
               <label for="serviceAddress">Service Address:</label>
             </p>
-            <p class="textField">
+            <p class="textField webReady">
               <input type="text" for="serviceAddress" name="serviceAddress" placeholder="P.O. Box 233" required>
+            </p>
+            <p class="textField printReady">
+              <input type="text" for="serviceAddress" name="serviceAddress" required>
             </p>
           </div>
 
@@ -76,8 +83,11 @@
             <p>
               <label for="cityStateZip">City, State, Zip Code:</label>
             </p>
-            <p class="textField">
+            <p class="textField webReady">
               <input type="text" for="cityStateZip" name="cityStateZip" placeholder="Decaturville, TN 38329" required>
+            </p>
+            <p class="textField printReady">
+              <input type="text" for="cityStateZip" name="cityStateZip" required>
             </p>
           </div>
 
@@ -85,8 +95,11 @@
             <p>
               <label for="phone">Phone #:</label>
             </p>
-            <p class="textField">
+            <p class="textField webReady">
               <input type="text" for="phone" name="phone" placeholder="(123) 456-7890" required>
+            </p>
+            <p class="textField printReady">
+              <input type="text" for="phone" name="phone" required>
             </p>
           </div>
 
@@ -94,8 +107,11 @@
             <p>
               <label for="email">Email Address:</label>
             </p>
-            <p class="textField">
+            <p class="textField webReady">
               <input type="text" for="email" name="email" placeholder="example@email.com" required>
+            </p>
+            <p class="textField printReady">
+              <input type="text" for="email" name="email" required>
             </p>
           </div>
 
@@ -106,12 +122,13 @@
             <p>
             <div class="checkboxes">
               <label class="container">Lexington Electric
-                <input type="checkbox" for="roundUpElectric" name="roundUpElectric" checked="checked">
+                <input type="checkbox" for="roundUpElectric" name="roundUpElectric" checked="checked" class="checkbox">
                 <span class="checkmark"></span>
               </label>
 
               <label class="container">Lexington Utilities
-                <input type="checkbox" for="roundUpUtilities" name="roundUpUtilities">
+                <input type="checkbox" for="roundUpUtilities" name="roundUpUtilities" checked="checked"
+                  class="checkbox">
                 <span class="checkmark"></span>
               </label>
             </div>
@@ -119,7 +136,7 @@
           </div>
           <!-- <div class="h-captcha" data-captcha="true"></div> -->
           <button type="submit" name="submit" id="submit" value="Send Form" class="donateButton">
-            Submit
+            Print This Form
           </button>
         </form>
       </article>
@@ -154,7 +171,8 @@
   <script>
     var btn = document.getElementById("submit")
     btn.onclick = function () {
-      alert("THANK YOU FOR YOUR SUPPORT!\n\nYour Round Up form has been submitted. \n\nClick 'Close' to return to the main page.")
+      print()
+      // alert("THANK YOU FOR YOUR SUPPORT!\n\nYour Round Up form has been submitted. \n\nClick 'Close' to return to the main page.")
     }
   </script>
 </body>

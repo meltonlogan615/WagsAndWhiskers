@@ -220,6 +220,7 @@ section {
 .slideShow {
   text-align: center;
   margin: 0;
+  z-index: 10;
 }
 
 .slideImage {
@@ -239,7 +240,6 @@ section {
   display: inline-flex;
   width: 30%;
   height: auto;
-  z-index: 50;
   background-color: var(--wwOrange);
 }
 
@@ -295,12 +295,22 @@ section {
   transition: transform 0.5s ease-in-out;
 }
 
-.mainPointImg {
+.mainPointImageContainer {
+  display: flex;
   width: 50%;
   height: 30%;
   border-radius: 50%;
   border: 1px solid black;
-  margin: 1rem 0;
+  margin: 1rem auto;
+  background-color: var(--textColor);
+}
+
+.mainPointImage {
+  display: flex;
+  font-size: 48px;
+  font-family: "Courier New", Courier, monospace;
+  color: var(--wwPurple);
+  margin: auto;
 }
 
 .mainPoint > h2 {
@@ -420,12 +430,13 @@ article.fullBoard {
 .roundUpVerbage {
   width: 40%;
   margin: auto;
+  padding: 1rem;
   text-align: center;
 }
 
 .roundUpVerbage h2 {
   color: #000;
-  margin: 2rem 1rem 1rem 1rem;
+  margin: 1rem;
 }
 
 .roundUpVerbage p {
@@ -433,19 +444,43 @@ article.fullBoard {
   margin: 0 1rem 1rem 1rem;
 }
 
-.roundUpVerbage p > a {
+.roundUpVerbage > p > a {
   color: #000;
   text-decoration: underline;
-  padding: 1rem;
+  margin-bottom: 1rem;
   font-weight: 600;
 }
 
 /**** FINAL CTA ****/
 
 .finalCTA {
+  display: flex;
   width: 100%;
-  height: 30vw;
+  /* height: auto; */
   background-color: var(--wwOrange);
+  flex-wrap: wrap;
+}
+
+.finalCTA > .cta {
+  display: flex;
+  width: 50%;
+  padding: 1rem;
+  margin: auto;
+}
+
+.ctaContainer > h2 {
+  margin: 1rem;
+}
+
+.finalCTA > .cta > .ctaContainer {
+  padding: 1rem;
+}
+
+.ctaImageContainer > a > img {
+  max-height: 20%;
+  max-width: 30%;
+  border-radius: 10px;
+  margin: 1rem;
 }
 
 /**** FOOTER ****/
@@ -455,7 +490,12 @@ footer {
   color: #000;
 }
 
-footer > a {
+footer > p {
+  color: #000;
+  margin-top: 0.5rem;
+}
+
+footer > p > a {
   margin: 1rem 0;
   color: #000;
   text-decoration: underline;
@@ -721,7 +761,6 @@ footer > a:hover {
     height: auto;
     display: block;
     padding: 1rem 0;
-    border: 2px solid black;
   }
 
   .mainPoint {
@@ -753,5 +792,14 @@ footer > a:hover {
   .roundUpVerbage {
     width: 80%;
     margin: 1rem auto;
+  }
+
+  .finalCTA {
+    display: block;
+  }
+
+  .finalCTA > .cta {
+    display: block;
+    width: 100%;
   }
 }

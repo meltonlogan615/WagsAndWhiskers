@@ -1,0 +1,60 @@
+:root {
+  --mainWidth: 40vw;
+  --sideWidth: 35vw;
+}
+
+@media print {
+  html {
+    background-color: white;
+  }
+  body {
+    size: 8.5in 11in;
+    margin: 0;
+    background-color: white;
+  }
+
+  .headerLeft {
+    max-width: var(--mainWidth);
+    border: 1px solid black;
+    margin: 0;
+  }
+
+  .headerRight {
+    max-width: var(--sideWidth);
+    border: 1px solid black;
+  }
+
+  main {
+    /* width: 8.5in; */
+  }
+
+  .formHeader {
+    max-width: var(--mainWidth);
+    margin: 0;
+  }
+
+  .formContent {
+    max-width: var(--mainWidth);
+  }
+
+  .webReady {
+    display: none;
+  }
+
+  .printReady {
+    display: block;
+  }
+
+  .mainContentRight {
+    width: var(--sideWidth);
+    margin-right: 12rem;
+  }
+
+  .donateButton {
+    display: none;
+  }
+
+  .checkbox {
+    border: 1px solid black;
+  }
+}
