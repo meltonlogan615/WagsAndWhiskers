@@ -46,7 +46,7 @@ body {
 }
 
 hr {
-  border-color: var(--wwPurple);
+  border-color: var(--wwOrange);
   height: 10px;
   border-width: 2;
   margin: 1rem 0;
@@ -60,7 +60,8 @@ hr {
   backdrop-filter: blur(8.5px);
   -webkit-backdrop-filter: blur(8.5px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid var(--wwOrange);
+  /* border: 1px solid rgba(255, 255, 255, 0.18); */
 }
 
 /********************/
@@ -159,7 +160,6 @@ nav {
   display: flex;
   width: 100%;
   height: 35%;
-  border: 1px solid black;
   justify-content: end;
   background-color: var(--wwPurple);
   padding: 1rem 0;
@@ -210,7 +210,7 @@ section {
   display: flex;
   width: 100%;
   height: auto;
-  background-color: #ffc75f;
+  /* background-color: #ffc75f; */
 }
 
 .slideShowContainer {
@@ -232,10 +232,13 @@ section {
   margin: auto;
   object-fit: cover;
   transition: transform 0.5s ease-in-out;
+  z-index: 100;
 }
 
 .slideShow img:hover {
   transform: scale(1.05);
+  border: 1px solid var(--wwOrange);
+  z-index: 100;
 }
 
 /* CALL TO ACTION */
@@ -243,7 +246,7 @@ section {
   display: inline-flex;
   width: 30%;
   height: auto;
-  background-color: var(--wwOrange);
+  /* background-color: var(--wwOrange); */
 }
 
 .ctaContainer {
@@ -282,13 +285,13 @@ section {
   display: inline-flex;
   width: 100%;
   min-height: 30vw;
-  background-color: #ffc75f;
+  /* background-color: #ffc75f; */
 }
 
 .mainPoint {
   height: 24rem;
   width: 20%;
-  border: 1px solid black;
+  border: 1px solid var(--wwOrange);
   background-color: var(--wwPurple);
   margin: auto;
   padding: 0.85rem;
@@ -303,7 +306,7 @@ section {
   width: 50%;
   height: 30%;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid var(--wwOrange);
   margin: 1rem auto;
   background-color: var(--textColor);
 }
@@ -349,7 +352,7 @@ section {
 .board {
   width: 100%;
   min-height: 30vw;
-  background-color: var(--wwOrange);
+  /* background-color: var(--wwOrange); */
 }
 
 article.fullBoard {
@@ -414,7 +417,7 @@ article.fullBoard {
   justify-content: space-around;
   width: 100%;
   min-height: 30vw;
-  background-color: var(--wwOrange);
+  /* background-color: var(--wwOrange); */
 }
 
 .roundUpImage {
@@ -459,8 +462,6 @@ article.fullBoard {
 .finalCTA {
   display: flex;
   width: 100%;
-  /* height: auto; */
-  background-color: var(--wwOrange);
   flex-wrap: wrap;
 }
 
@@ -630,6 +631,7 @@ footer > a:hover {
   transition: background-color 0.5s ease-in-out;
   transition: color 0.5s ease-in-out;
   transition: border 0.5s ease-in-out;
+  border-radius: 10px;
 }
 
 .close:hover {
@@ -692,7 +694,8 @@ footer > a:hover {
   .wwLogo {
     width: 80vw;
     position: relative;
-    border-top-left-radius: ;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
 
   nav {
